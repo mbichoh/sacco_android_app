@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
+    android:layout_marginBottom="5dp"
+    app:rippleColor="@color/colorAccent"
+    android:id="@+id/cardInvestmentLayout"
+    >
+
+    <TextView
+        android:id="@+id/txtInvestmentId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/manja_r"
+        android:text="@string/investmentId"
+        android:textColor="@color/colorBlack"
+        android:visibility="invisible"
+        />
+
+<LinearLayout
+    android:id="@+id/ll1A"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_cards"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:baselineAligned="false">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/txtInvestmentDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manja_r"
+            android:text="@string/dateFrom"
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manja_b"
+            android:text="@string/to"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/txtInvestmentMaturityDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manja_r"
+            android:text="@string/dateTo"
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtInvestmentAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manja_b"
+            android:text="@string/amountInvested"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtInvestmentRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manja_r"
+            android:text="@string/interest_rate"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/txtInvestmentStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#00E676"
+            android:text="@string/status"
+            android:textAlignment="textEnd"
+            />
+    </LinearLayout>
+</LinearLayout>
+</com.google.android.material.card.MaterialCardView>

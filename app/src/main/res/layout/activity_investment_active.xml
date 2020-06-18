@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/coloMain"
+    tools:context=".InvestmentActiveActivity"
+    android:id="@+id/drawer_layout">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/coloMain"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:padding="15dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manja_r"
+                    android:text="@string/status_title"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/paymentInvestmentStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/manja_b"
+                    android:textColor="#00E676"
+                    android:text="@string/status"
+                    android:drawableEnd="@drawable/ic_success"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manja_r"
+                        android:text="@string/date_of_investment"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/paymentInvestmentDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manja_b"
+                        android:text="@string/null_"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="17sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manja_r"
+                        android:text="@string/maturity_of_contract"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/paymentInvestmentMaturityDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manja_b"
+                        android:text="@string/null_"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="17sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:id="@+id/divider0"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manja_r"
+                    android:text="@string/amount_invested"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/paymentInvestmentAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manja_b"
+                    android:text="@string/kes_"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manja_r"
+                    android:text="@string/amount_refunded"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/paymentInvestmentRefunded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manja_b"
+                    android:text="@string/kes_"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manja_r"
+                    android:text="@string/investment_balance"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/paymentInvestmentBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manja_b"
+                    android:text="@string/kes_"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manja_r"
+                    android:text="@string/interest_rate_title"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/paymentInvestmentRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manja_b"
+                    android:text="@string/_rate_percentage"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manja_r"
+                    android:text="@string/interest_payed"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/paymentInvestmentInterest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manja_b"
+                    android:text="@string/kes_"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="17sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/paymentInvestmentBank"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manja_b"
+                    android:text="@string/null_"
+                    android:textColor="@color/colorBlack2"
+                    android:layout_weight="2"
+                    android:textAlignment="center"
+                    android:textSize="17sp" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manja_r"
+                    android:text="@string/acc_no"
+                    android:textColor="@color/colorBlack2"
+                    android:textAlignment="center"
+                    android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/paymentInvestmentAccountNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manja_b"
+                        android:text="@string/null_"
+                        android:textColor="@color/colorBlack2"
+                        android:textAlignment="center"
+                        android:textSize="17sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <ProgressBar
+                android:visibility="gone"
+                android:textAlignment="center"
+                android:id="@+id/progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="20dp"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="80dp"
+                android:background="@drawable/card2_bg"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/paymentRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manja_r"
+                        android:text="@string/expected_total_investment"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txtTotalAmountInvested"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manja_b"
+                        android:text="@string/kes_00_00"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinate_layout_fab"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottom_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/colorPrimaryDark"
+            app:fabCradleMargin="10dp"
+            app:fabCradleRoundedCornerRadius="30dp"
+            app:fabAlignmentMode="end"
+            app:navigationIcon="@drawable/ic_menu_black_24dp"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/main_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_black_24dp"
+            app:backgroundTint="@color/colorPrimaryDark"
+            app:layout_anchor="@id/bottom_app_bar"
+            />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_user_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/coordinate_layout_fab"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_mail_outline_black_24dp"
+        android:focusable="true" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_contact_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/add_user_fab"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_announcement_black_24dp"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/txt_add_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_btn2"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:text="@string/new_message"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/add_user_fab"
+        app:layout_constraintTop_toTopOf="@+id/add_user_fab"
+        app:layout_constraintEnd_toStartOf="@id/add_user_fab"
+        />
+
+    <TextView
+        android:id="@+id/txt_add_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_btn2"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:text="@string/make_request"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/add_contact_fab"
+        app:layout_constraintTop_toTopOf="@+id/add_contact_fab"
+        app:layout_constraintEnd_toStartOf="@id/add_contact_fab"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

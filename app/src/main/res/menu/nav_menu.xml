@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="ABOUT US">
+        <menu>
+            <item android:title="Investment"
+                android:icon="@drawable/ic_attach_money_black_24dp"
+                />
+            <item android:title="Rates"
+                android:icon="@drawable/ic_tune_black_24dp"
+                />
+            <item android:title="Policy"
+                android:icon="@drawable/ic_verified_user_black_24dp"
+                />
+        </menu>
+    </item>
+
+    <item android:title="REQUEST">
+        <menu>
+            <item android:title="Invest"
+                android:icon="@drawable/ic_attach_money_black_24dp"
+                />
+        </menu>
+    </item>
+
+    <item android:title="PROFILE">
+        <menu>
+            <item android:title="Change Password"
+                android:icon="@drawable/ic_lock_open_black_24dp"
+                />
+            <item android:title="Edit"
+                android:icon="@drawable/ic_edit_black_24dp"
+                />
+            <item android:title="Logout"
+                android:icon="@drawable/ic_log_out"
+                />
+        </menu>
+    </item>
+</menu>
