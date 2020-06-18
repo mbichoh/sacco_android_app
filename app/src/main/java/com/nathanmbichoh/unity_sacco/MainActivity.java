@@ -19,9 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView[] mDots;
 
-    private SliderAdapter sliderAdapter;
-
-    private Button mNextButton, mBackButton, mSkipButton;
+    private Button mNextButton;
+    private Button mBackButton;
 
     private int mCurrentPage;
 
@@ -30,14 +29,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mNextButton = (Button) findViewById(R.id.nextBtn);
-        mBackButton = (Button) findViewById(R.id.prevBtn);
-        mSkipButton = (Button) findViewById(R.id.skipBtn);
+        mNextButton = findViewById(R.id.nextBtn);
+        mBackButton = findViewById(R.id.prevBtn);
+        Button mSkipButton = findViewById(R.id.skipBtn);
 
-        mSlideViewPager = (ViewPager) findViewById(R.id.slideViewPager);
-        mDotLayout = (LinearLayout) findViewById(R.id.dotsLayout);
+        mSlideViewPager = findViewById(R.id.slideViewPager);
+        mDotLayout = findViewById(R.id.dotsLayout);
 
-        sliderAdapter = new SliderAdapter(this);
+        SliderAdapter sliderAdapter = new SliderAdapter(this);
         mSlideViewPager.setAdapter(sliderAdapter);
 
         addDotsIndicator(0);

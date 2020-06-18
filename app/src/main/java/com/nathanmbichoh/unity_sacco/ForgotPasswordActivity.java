@@ -10,13 +10,12 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class ForgotPasswordActivity extends AppCompatActivity {
 
-    private Button btnForgotPassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
 
-        btnForgotPassword   = (Button) findViewById(R.id.forgotPasswordBtn);
+        Button btnForgotPassword = (Button) findViewById(R.id.forgotPasswordBtn);
         btnForgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

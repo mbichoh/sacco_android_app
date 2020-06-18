@@ -62,8 +62,7 @@ public class Dashboard extends AppCompatActivity {
 
         CheckInternetConnection.checkConnection(getApplicationContext());
 
-        //if the user is not logged in
-        //starting the login activity
+        //check if member session is active: if not, return to login
         if (!SharedPrefManager.getInstance(this).isLoggedIn()) {
             finish();
             startActivity(new Intent(this, Login.class));

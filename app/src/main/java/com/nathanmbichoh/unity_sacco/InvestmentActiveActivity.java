@@ -79,6 +79,7 @@ public class InvestmentActiveActivity extends AppCompatActivity {
         //if connected
         CheckInternetConnection.checkConnection(getApplicationContext());
 
+        //check if member session is active: if not, return to login
         if (!SharedPrefManager.getInstance(this).isLoggedIn()) {
             finish();
             startActivity(new Intent(this, Login.class));

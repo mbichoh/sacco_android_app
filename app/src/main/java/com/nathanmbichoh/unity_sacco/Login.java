@@ -1,5 +1,6 @@
 package com.nathanmbichoh.unity_sacco;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,11 +11,11 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.tabs.TabLayout;
 import com.nathanmbichoh.unity_sacco.controller.CheckInternetConnection;
 import com.nathanmbichoh.unity_sacco.member_account.ExistingMemberFragment;
 import com.nathanmbichoh.unity_sacco.member_account.NewMemberFragment;
+import com.nathanmbichoh.unity_sacco.model.SharedPrefManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +28,12 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         CheckInternetConnection.checkConnection(getApplicationContext());
+
+        //check if member session is active: if not, return to login
+        if (!SharedPrefManager.getInstance(this).isLoggedIn()) {
+            finish();
+            startActivity(new Intent(this, Login.class));
+        }
 
         ViewPager viewPager = findViewById(R.id.viewPagerAccount);
         TabLayout tabLayout = findViewById(R.id.tabLayoutAccount);
